@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Is Technology Designed for Everyone?</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f6f7f9;
+        color: #20242a;
+        line-height: 1.6;
+    }
+
+    header {
+        background: #182b49;
+        color: white;
+        padding: 70px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        margin: 0 0 15px;
+    }
+
+    header p {
+        max-width: 760px;
+        margin: auto;
+        font-size: 1.2rem;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 45px 20px;
+    }
+
+    .intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 45px;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+        color: #182b49;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 15px;
+        padding: 28px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card h3 {
+        color: #182b49;
+        margin-top: 0;
+    }
+
+    .stat {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #c6533d;
+        margin: 10px 0;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 60px 0 25px;
+        color: #182b49;
+        font-size: 2rem;
+    }
+
+    button {
+        background: #182b49;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 11px 18px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        margin-top: 12px;
+    }
+
+    button:hover {
+        background: #294d7a;
+    }
+
+    .more-info {
+        display: none;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #ddd;
+    }
+
+    .question {
+        background: #e9eef5;
+        border-radius: 15px;
+        padding: 35px;
+        margin-top: 55px;
+        text-align: center;
+    }
+
+    .question h2 {
+        color: #182b49;
+        font-size: 2rem;
+    }
+
+    .solutions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 18px;
+        margin-top: 25px;
+    }
+
+    .solution {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .sources {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        margin-top: 55px;
+    }
+
+    .sources a {
+        color: #245a9b;
+        word-break: break-word;
+    }
+
+    footer {
+        text-align: center;
+        padding: 35px 20px;
+        background: #182b49;
+        color: white;
+        margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 2.1rem;
+        }
+
+        .stat {
+            font-size: 2.4rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Is Technology Designed for Everyone?</h1>
+
+    <p>
+        Children and older adults can experience technology very differently.
+        As digital platforms become more powerful, who is responsible for
+        protecting the people who may be most vulnerable to their risks?
+    </p>
+</header>
+
+<div class="container">
+
+    <div class="intro">
+        <h2>Not Every User Has the Same Relationship With Technology</h2>
+
+        <p>
+            Technology is advancing rapidly, but the people using it do not
+            necessarily have the same experience, digital literacy, or ability
+            to recognize its risks. Children and older adults can be vulnerable
+            for different reasons.
+        </p>
+    </div>
+
+    <h2 class="section-title">Children & Teens</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Can We Tell What's Real?</h3>
+
+            <div class="stat">35%</div>
+
+            <p>
+                of U.S. teens ages 13–18 said they had been misled by fake
+                content online.
+            </p>
+
+            <p>
+                Another <strong>22%</strong> said they had shared something
+                they later learned was fake.
+            </p>
+
+            <button onclick="toggleInfo('teenFake')">
+                Why does this matter?
+            </button>
+
+            <div id="teenFake" class="more-info">
+                Children are growing up in an environment containing
+                misinformation, manipulated media, and AI-generated content.
+                Digital literacy is becoming increasingly important for
+                deciding what should and should not be trusted.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Almost Constantly Online</h3>
+
+            <div class="stat">46%</div>
+
+            <p>
+                of U.S. teens said they were online almost constantly in 2024.
+            </p>
+
+            <p>
+                In 2015, that number was <strong>24%</strong>.
+            </p>
+
+            <button onclick="toggleInfo('teenTime')">
+                See the change
+            </button>
+
+            <div id="teenTime" class="more-info">
+                That's an increase of 22 percentage points in less than a
+                decade. Technology is not simply something many young people
+                occasionally use; it can be a continuous part of their
+                environment.
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Older Adults</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Fraud Has Real Consequences</h3>
+
+            <div class="stat">$2.4B</div>
+
+            <p>
+                Adults age 60 and older reported approximately $2.4 billion
+                in fraud losses in 2024, according to the Federal Trade
+                Commission.
+            </p>
+
+            <button onclick="toggleInfo('fraud')">
+                Why does this matter?
+            </button>
+
+            <div id="fraud" class="more-info">
+                New technologies can create opportunities for connection and
+                independence, but they also create new forms of fraud and
+                deception. Clearer warnings and easier-to-understand interfaces
+                may help users make more informed decisions.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Digital Literacy Can Help</h3>
+
+            <div class="stat">64% → 85%</div>
+
+            <p>
+                In one study, older adults improved their ability to correctly
+                distinguish true from false news after a one-hour digital
+                media literacy intervention.
+            </p>
+
+            <button onclick="toggleInfo('literacy')">
+                What can we learn?
+            </button>
+
+            <div id="literacy" class="more-info">
+                Vulnerability does not mean helplessness. Education and
+                thoughtful technology design can give people more control
+                over their digital experiences.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="question">
+
+        <h2>Who Should Adapt?</h2>
+
+        <p>
+            Should vulnerable users simply be expected to adapt to rapidly
+            changing technology, or should technology be designed to adapt
+            to the humans using it?
+        </p>
+
+    </div>
+
+    <h2 class="section-title">Platform Responsibility</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Public Support for More Protection</h3>
+
+            <div class="stat">85%</div>
+
+            <p>
+                of U.S. adults surveyed by Pew Research Center in 2026
+                supported requiring parental consent for minors to create
+                social media accounts.
+            </p>
+
+            <p>
+                <strong>78%</strong> supported age verification, and
+                <strong>78%</strong> supported limits on how much time minors
+                can spend on social media.
+            </p>
+
+            <button onclick="toggleInfo('responsibility')">
+                The bigger question
+            </button>
+
+            <div id="responsibility" class="more-info">
+                Platforms often benefit from keeping users engaged. That
+                creates an important question: when safety and engagement
+                conflict, should companies decide where the line is, or
+                should some protections be legally required?
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">What Could Better Design Look Like?</h2>
+
+    <div class="solutions">
+
+        <div class="solution">
+            <h3>For Children</h3>
+            <p>
+                Age-appropriate recommendations, stronger privacy protections,
+                parental controls, and reasonable screen-time safeguards.
+            </p>
+        </div>
+
+        <div class="solution">
+            <h3>For Older Adults</h3>
+            <p>
+                Clearer interfaces, understandable privacy settings, scam
+                warnings, and explanations before information is made public.
+            </p>
+        </div>
+
+        <div class="solution">
+            <h3>For Everyone</h3>
+            <p>
+                Technology that prioritizes transparency, digital literacy,
+                human agency, and informed choices.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="question">
+
+        <h2>A Question Worth Asking</h2>
+
+        <p>
+            If technology is truly designed for humans, shouldn't the humans
+            who are most vulnerable to it be part of the design conversation?
+        </p>
+
+    </div>
+
+    <div class="sources">
+
+        <h2>Sources</h2>
+
+        <p>
+            <strong>Common Sense Media:</strong>
+            Teens, Trust, and Technology in the Age of AI.
+            <br>
+            <a href="https://www.commonsensemedia.org/sites/default/files/research/report/teens-trust-and-technology-in-the-age-of-ai_v2_web.pdf"
+               target="_blank">
+                View source
+            </a>
+        </p>
+
+        <p>
+            <strong>Pew Research Center:</strong>
+            Teen Internet Use Over Time.
+            <br>
+            <a href="https://www.pewresearch.org/chart/teen-internet-use-over-time-2/"
+               target="_blank">
+                View source
+            </a>
+        </p>
+
+        <p>
+            <strong>Federal Trade Commission:</strong>
+            Annual report on protecting older adults from fraud.
+            <br>
+            <a href="https://www.ftc.gov/news-events/news/press-releases/2025/12/ftc-issues-annual-report-congress-agencys-actions-protect-older-adults"
+               target="_blank">
+                View source
+            </a>
+        </p>
+
+        <p>
+            <strong>Scientific Study:</strong>
+            Digital media literacy intervention among older adults.
+            <br>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8994776/"
+               target="_blank">
+                View source
+            </a>
+        </p>
+
+        <p>
+            <strong>Pew Research Center:</strong>
+            Americans' views on social media policies for minors.
+            <br>
+            <a href="https://www.pewresearch.org/short-reads/2026/07/01/majority-of-americans-support-banning-social-media-for-kids-under-16/"
+               target="_blank">
+                View source
+            </a>
+        </p>
+
+        <p>
+            <strong>Federal Trade Commission:</strong>
+            Changes to the Children's Online Privacy Protection Rule.
+            <br>
+            <a href="https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-finalizes-changes-childrens-privacy-rule-limiting-companies-ability-monetize-kids-data"
+               target="_blank">
+                View source
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>
+        Human Artifact • Humans in the Age of Bots
+    </p>
+</footer>
+
+<script>
+function toggleInfo(id) {
+    const element = document.getElementById(id);
+
+    if (element.style.display === "block") {
+        element.style.display = "none";
+    } else {
+        element.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
